@@ -1,0 +1,104 @@
+sql [2021-09-17 17:43:38] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 17:48:31] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 17:55:43] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 17:59:16] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:04:06] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:04:33] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:05:08] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:05:48] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:06:50] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:12:18] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:50:40] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:50:43] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:52:19] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:52:21] [DEBUG]: Executing (default): SELECT `id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 18:52:29] [DEBUG]: Executing (default): SELECT `id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 18:53:18] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:53:24] [DEBUG]: Executing (default): SELECT `id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 18:55:36] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:55:46] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 18:56:33] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:56:37] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 18:57:18] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:57:21] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 18:59:17] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 18:59:20] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:07:50] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:07:52] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:08:05] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:08:07] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:08:19] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:08:23] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:08:40] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:08:42] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:09:55] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:10:05] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:10:07] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:10:21] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:10:23] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:14:39] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:14:39] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:14:50] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:14:56] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:17:24] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:17:49] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:17:51] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:18:06] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:18:23] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:18:25] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:18:57] [DEBUG]: Executing (default): SELECT 1+1 AS result
+
+sql [2021-09-17 19:18:59] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 19:21:00] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
+
+sql [2021-09-17 20:33:25] [DEBUG]: Executing (default): SELECT 1+1 AS result
+

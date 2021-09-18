@@ -1,17 +1,19 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-16 13:51:17
- * @LastEditTime: 2021-09-16 15:36:25
+ * @LastEditTime: 2021-09-17 18:03:51
  * @LastEditors: Please set LastEditors
  * @Description: db
  * @FilePath: /api-server/src/DB/db.ts
  */
-import { Sequelize } from 'sequelize';
-const { sqlLogger } = require('../utils/logger');
+import { Sequelize} from 'sequelize';
+import { sqlLogger } from '../utils/logger';
+import { dbInfo } from '../utils/config';
 
-const sequelize = new Sequelize('testApis', 'root', 'edisonchen', {
-  host: 'localhost',
-  dialect: 'mysql',
+const { databaseName, userName, password, host, dialect } = dbInfo;
+const sequelize = new Sequelize(databaseName, userName, password, {
+  host,
+  dialect,
   logging: (msg) => {
     sqlLogger.debug(msg);
   },

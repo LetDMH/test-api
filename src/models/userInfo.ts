@@ -1,7 +1,7 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-16 15:39:24
- * @LastEditTime: 2021-09-16 16:13:44
+ * @LastEditTime: 2021-09-17 20:33:22
  * @LastEditors: Please set LastEditors
  * @Description: 用户信息
  * @FilePath: /api-server/src/models/userInfo.ts
@@ -10,6 +10,11 @@ import { Sequelize, DataTypes } from 'sequelize';
 import sequelize from './db'
 
 const UserInfoModel = sequelize.define('_user_info', {
+  _id: {
+    type: DataTypes.INET,
+    primaryKey: true,
+    allowNull: false,
+  },
   _user_name: {
     type: DataTypes.STRING(255),
     allowNull: false,
@@ -30,7 +35,7 @@ const UserInfoModel = sequelize.define('_user_info', {
   },
   _utime: {
     type: DataTypes.DATE,
-    defaultValue: +new Date()
+    defaultValue: new Date().toISOString()
   }
 })
 
