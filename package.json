@@ -30,7 +30,14 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "tslint --fix -c ./tslint.json",
+      "git add"
+    ]
   }
 }
