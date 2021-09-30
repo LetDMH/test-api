@@ -1,32 +1,4 @@
-sql [2021-09-18 11:38:43] [DEBUG]: Executing (default): SELECT 1+1 AS result
+sql [2021-09-30 10:13:46] [DEBUG]: Executing (default): SELECT 1+1 AS result
 
-sql [2021-09-18 11:40:32] [DEBUG]: Executing (default): SELECT 1+1 AS result
-
-sql [2021-09-18 11:42:14] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
-
-sql [2021-09-18 11:44:37] [DEBUG]: Executing (default): SELECT 1+1 AS result
-
-sql [2021-09-18 11:44:49] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
-
-sql [2021-09-18 11:45:19] [DEBUG]: Executing (default): SELECT 1+1 AS result
-
-sql [2021-09-18 11:45:20] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
-
-sql [2021-09-18 11:46:13] [DEBUG]: Executing (default): SELECT 1+1 AS result
-
-sql [2021-09-18 11:50:08] [DEBUG]: Executing (default): SELECT 1+1 AS result
-
-sql [2021-09-18 11:50:49] [DEBUG]: Executing (default): SELECT 1+1 AS result
-
-sql [2021-09-18 11:50:51] [DEBUG]: Executing (default): UPDATE `_user_info` SET `_user_name`=?,`_mobile`=?,`_email`=? WHERE `_user_id` = ?
-
-sql [2021-09-18 11:54:52] [DEBUG]: Executing (default): SELECT 1+1 AS result
-
-sql [2021-09-18 11:54:56] [DEBUG]: Executing (default): UPDATE `_user_info` SET `_user_name`=?,`_mobile`=?,`_email`=? WHERE `_user_id` = ?
-
-sql [2021-09-18 11:56:32] [DEBUG]: Executing (default): SELECT 1+1 AS result
-
-sql [2021-09-18 11:56:37] [DEBUG]: Executing (default): SELECT `_id`, `_user_name`, `_user_id`, `_mobile`, `_email`, `_ctime`, `_utime` FROM `_user_info` AS `_user_info`;
-
-sql [2021-09-18 11:57:08] [DEBUG]: Executing (default): SELECT 1+1 AS result
+sql [2021-09-30 10:15:37] [DEBUG]: Executing (default): SELECT 1+1 AS result
 
