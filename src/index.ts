@@ -1,7 +1,7 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-15 16:37:12
- * @LastEditTime: 2021-09-28 14:21:58
+ * @LastEditTime: 2021-10-14 17:58:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /api-server/src/index.ts
@@ -29,6 +29,10 @@ app.use(express.json());
 app.use('/api/sys', userInfoRouter);
 app.use('/api/sys', positionRouter);
 app.use('/api/sys', positionRoleRouter);
+
+app.get("/test", (req, res) => {
+  res.send("Hello Docker!")
+});
 
 app.listen(12306, () => {
   console.log(`serve is being on ${ip.address()}:${PORT}`);
