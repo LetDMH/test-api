@@ -1,4 +1,0 @@
-sql [2021-09-30 10:13:46] [DEBUG]: Executing (default): SELECT 1+1 AS result
-
-sql [2021-09-30 10:15:37] [DEBUG]: Executing (default): SELECT 1+1 AS result
-

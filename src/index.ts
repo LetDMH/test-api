@@ -1,14 +1,15 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-15 16:37:12
- * @LastEditTime: 2021-10-14 17:58:58
+ * @LastEditTime: 2021-11-17 19:59:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /api-server/src/index.ts
  */
-import express from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import ip from 'ip';
 import { PORT } from './utils/constant';
+import { accessLogger, defaultLogger as logger } from './utils/logger'
 import userInfoRouter from './routes/userInfo';
 import positionRouter from './routes/position';
 import positionRoleRouter from './routes/positionRole';
@@ -24,6 +25,14 @@ app.all('*', (req, res, next) => {
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use((req: Request, res: Response, next: NextFunction) => {
+  logger.debug({
+    header: req.headers,
+    body: req.body
+  });
+  // accessLogger.debug();
+  next();
+})
 
 // routes
 app.use('/api/sys', userInfoRouter);

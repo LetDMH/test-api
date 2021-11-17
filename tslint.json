@@ -13,7 +13,8 @@
         "trailing-comma": false,
         "object-literal-sort-keys": false,
         "member-ordering": false,
-        "one-line": false
+        "one-line": false,
+        "no-var-requires": false
     },
     "rulesDirectory": []
 }

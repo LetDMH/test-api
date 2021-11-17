@@ -1,7 +1,7 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-27 21:10:28
- * @LastEditTime: 2021-09-28 14:13:13
+ * @LastEditTime: 2021-11-17 20:10:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /api-server/src/controllers/position.ts
@@ -12,18 +12,14 @@ import { getRandomNumber } from '../utils/utils';
 
 class Position {
   public static async getAllPosition(req: Request, res: Response) {
-    let value = await PositionModel.findAll({
+    const value = await PositionModel.findAll({
       attributes: ['orgId', 'positionGroup', 'positionId', 'positionName']
     })
-    return res.send({
-      code: 200,
-      msg: '操作成功！',
-      data: value
-    });
+    return value;
   }
   public static async addPosition(req: Request, res: Response) {
     console.log(res.req.body)
-    let { orgId, positionName, positionGroup, positionId } = res.req.body;
+    const { orgId, positionName, positionGroup, positionId } = res.req.body;
     let ins;
     if (positionId) {
       ins = await PositionModel.update({
@@ -36,7 +32,7 @@ class Position {
         }
       })
     } else {
-      let ctime = new Date().toISOString();
+      const ctime = new Date().toISOString();
       ins = await PositionModel.create({
         orgId,
         positionName,
@@ -46,26 +42,17 @@ class Position {
         _utime: ctime
       })
     }
-    // console.log(ins)
-    return res.send({
-      code: 200,
-      msg: "操作成功！",
-      data: ins,
-    });
+    return ins;
   }
   public static async deletePosition(req: Request, res: Response) {
-    let { orgId, positionId } = res.req.body;
-    let ins = await PositionModel.destroy({
+    const { orgId, positionId } = res.req.body;
+    const ins = await PositionModel.destroy({
       where: {
         orgId,
         positionId
       }
     })
-    return res.send({
-      code: 200,
-      msg: "操作成功！",
-      data: ins,
-    });
+    return ins;
   }
 }
 
