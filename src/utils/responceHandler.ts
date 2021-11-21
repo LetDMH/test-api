@@ -1,12 +1,13 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-17 18:12:15
- * @LastEditTime: 2021-11-17 20:28:11
+ * @LastEditTime: 2021-11-20 16:44:32
  * @LastEditors: Please set LastEditors
  * @Description: 相应处理
  * @FilePath: /api-server/src/utils/responceHandler.ts
  */
 import { Request, Response, NextFunction } from 'express';
+import { errorLogger } from './logger';
 
 export default class ResponseHandler {
   /**
@@ -24,10 +25,13 @@ export default class ResponseHandler {
     else {
       err = error;
     }
+    errorLogger.error(err);
+    // console.log(error);
     res.send({
       code: errcode,
       data: null,
-      msg: err
+      // msg: err
+      msg: '网络异常'
     })
   }
   /**
@@ -55,7 +59,8 @@ export default class ResponseHandler {
         const result = await handler(req, res, next);
         this.resultHandler(result, res);
       } catch (err) {
-        next(err);
+        // next(err);
+        this.errorHandler(err, res);
       }
     }
   }

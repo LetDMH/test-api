@@ -1,7 +1,7 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-16 13:56:49
- * @LastEditTime: 2021-11-17 20:18:55
+ * @LastEditTime: 2021-11-20 16:42:25
  * @LastEditors: Please set LastEditors
  * @Description: 日志配置
  * @FilePath: /api-server/logger.ts
@@ -34,6 +34,17 @@ log4js.configure({
         pattern: "%c [%d{yyyy-MM-dd hh:mm:ss}] [%p]: %m%n",
       },
     },
+    // 逻辑处理错误
+    error: {
+      type: "dateFile",
+      filename: path.resolve(__dirname, "../", "logs", "errorLogs", "error.log"),
+      maxLogSize: 1024 * 1024, // 配置文件的最大字节数
+      keepFileExt: true,
+      layout: {
+        type: "pattern",
+        pattern: "%c [%d{yyyy-MM-dd hh:mm:ss}] [%p]: %m%n",
+      },
+    },
     default: {
       type: "console",
     },
@@ -46,6 +57,10 @@ log4js.configure({
     access: {
       appenders: ["access"],
       level: "all"
+    },
+    error: {
+      appenders: ["error"],
+      level: "error"
     },
     default: {
       appenders: ["default"],
@@ -60,4 +75,5 @@ process.on("exit", () => {
 
 export const sqlLogger = log4js.getLogger("sql");
 export const accessLogger = log4js.getLogger("access");
+export const errorLogger = log4js.getLogger("error");
 export const defaultLogger = log4js.getLogger();

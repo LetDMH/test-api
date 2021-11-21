@@ -1,7 +1,7 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-15 16:37:12
- * @LastEditTime: 2021-11-17 19:59:27
+ * @LastEditTime: 2021-11-20 13:06:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /api-server/src/index.ts
@@ -13,6 +13,7 @@ import { accessLogger, defaultLogger as logger } from './utils/logger'
 import userInfoRouter from './routes/userInfo';
 import positionRouter from './routes/position';
 import positionRoleRouter from './routes/positionRole';
+import log4js from 'log4js';
 const app = express();
 
 app.all('*', (req, res, next) => {
@@ -25,14 +26,25 @@ app.all('*', (req, res, next) => {
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use((req: Request, res: Response, next: NextFunction) => {
-  logger.debug({
-    header: req.headers,
-    body: req.body
-  });
-  // accessLogger.debug();
-  next();
-})
+// app.use(async (req: Request, res: Response, next: NextFunction) => {
+//   logger.debug({
+//     headers: req.headers,
+//     body: req.body,
+//     query: req.query,
+//     params: req.query,
+//   });
+//   next();
+// })
+app.use(log4js.connectLogger(accessLogger, {
+  // level: 'auto',
+  // 获取上下文中的数据:res[]、req[header]
+  format: `":method" ":status" ":url" "HTTP/http-version" ":response-timems" ":remote-addr" ":user-agent"`,
+  statusRules: [
+    {from: 200, to: 299, level: 'info'},
+    {codes: [304], level: 'info'},
+    {codes: [404, 500], level: 'error'},
+  ]
+}))
 
 // routes
 app.use('/api/sys', userInfoRouter);
