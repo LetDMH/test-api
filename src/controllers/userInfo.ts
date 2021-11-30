@@ -1,7 +1,7 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-16 16:43:52
- * @LastEditTime: 2021-11-20 17:00:57
+ * @LastEditTime: 2021-11-22 14:22:32
  * @LastEditors: Please set LastEditors
  * @Description: 用户信息
  * @FilePath: /api-server/src/controllers/userInfo.ts
@@ -29,7 +29,7 @@ class UserInfo {
       }
     })
     console.log(ins)
-    return ins;
+    return null;
   }
   public static async createUser(req: Request, res: Response, next: NextFunction) {
     const {_user_name, _mobile, _email} = res.req.body;
@@ -42,6 +42,7 @@ class UserInfo {
       _ctime: ctime,
       _utime: ctime
     })
+    return null;
   }
 }
 

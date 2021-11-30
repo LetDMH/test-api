@@ -1,7 +1,7 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-15 16:37:12
- * @LastEditTime: 2021-11-20 13:06:39
+ * @LastEditTime: 2021-11-29 17:50:36
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /api-server/src/index.ts
@@ -13,6 +13,7 @@ import { accessLogger, defaultLogger as logger } from './utils/logger'
 import userInfoRouter from './routes/userInfo';
 import positionRouter from './routes/position';
 import positionRoleRouter from './routes/positionRole';
+import TestApisRouter from './routes/test';
 import log4js from 'log4js';
 const app = express();
 
@@ -50,6 +51,8 @@ app.use(log4js.connectLogger(accessLogger, {
 app.use('/api/sys', userInfoRouter);
 app.use('/api/sys', positionRouter);
 app.use('/api/sys', positionRoleRouter);
+
+app.use('/api/tc', TestApisRouter);
 
 app.get("/test", (req, res) => {
   res.send("Hello Docker!")
