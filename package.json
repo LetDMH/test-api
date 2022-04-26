@@ -13,10 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "express-http-proxy": "^1.6.3",
     "ip": "^1.1.5",
     "log4js": "^6.3.0",
     "mysql2": "^2.3.0",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "typescript": "^4.6.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.0",

@@ -1,7 +1,7 @@
 /*
  * @Author: dingminghui
  * @Date: 2021-09-17 18:12:15
- * @LastEditTime: 2021-11-20 16:44:32
+ * @LastEditTime: 2022-01-10 18:48:28
  * @LastEditors: Please set LastEditors
  * @Description: 相应处理
  * @FilePath: /api-server/src/utils/responceHandler.ts
@@ -45,7 +45,7 @@ export default class ResponseHandler {
     res.send({
       code: 200,
       data,
-      msg: '操作成功！'
+      msg: '操作成功'
     })
   }
   /**

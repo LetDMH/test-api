@@ -15,7 +15,22 @@ import positionRouter from './routes/position';
 import positionRoleRouter from './routes/positionRole';
 import TestApisRouter from './routes/test';
 import log4js from 'log4js';
+const path = require('path');
 const app = express();
+
+const proxy   = require('express-http-proxy')
+
+const proxyTable = proxy('http://192.168.2.107:8088', {
+//   proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
+//     // console.log(proxyReqOpts, srcReq);
+
+//     proxyReqOpts.headers['Referer'] = 'http://192.168.2.107:8088';
+//  },
+})
+
+app.use('/', proxyTable);
+
+app.use(express.static(path.resolve(__dirname, '../dist/')));
 
 app.all('*', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
