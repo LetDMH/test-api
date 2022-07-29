@@ -15,6 +15,9 @@ import positionRouter from './routes/position';
 import positionRoleRouter from './routes/positionRole';
 import TestApisRouter from './routes/test';
 import log4js from 'log4js';
+import './service/douban'
+import './service/carHome'
+
 const path = require('path');
 const app = express();
 

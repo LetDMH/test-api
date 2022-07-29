@@ -7,6 +7,7 @@
  * @FilePath: /api-server/src/utils/config.ts
  */
 import { Dialect } from 'sequelize';
+// tslint:disable-next-line:interface-name
 interface Database {
   databaseName: string,
   userName: string,
@@ -18,7 +19,7 @@ interface Database {
 export const dbInfo: Database = {
   databaseName: 'apis',
   userName: 'root',
-  password: 'edisonchen',
+  password: 'edisonchen741',
   host: 'localhost',
   dialect: 'mysql'
 }
