@@ -47,12 +47,6 @@ async function getBookDetail(detailUrl: string): Promise<object> {
     })
     // @ts-ignore
     const publishDate = publishSpan[0].nextSibling.nodeValue.trim()
-    console.log({
-        name,
-        imgUrl,
-        publishDate,
-        author
-    })
     return {
         name,
         imgUrl,

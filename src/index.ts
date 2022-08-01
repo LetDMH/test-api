@@ -10,10 +10,13 @@ import express, { NextFunction, Request, Response } from 'express';
 import ip from 'ip';
 import { PORT } from './utils/constant';
 import { accessLogger, defaultLogger as logger } from './utils/logger'
+// import ResponseHandler from './utils/utils';
 import userInfoRouter from './routes/userInfo';
 import positionRouter from './routes/position';
 import positionRoleRouter from './routes/positionRole';
 import TestApisRouter from './routes/test';
+import DoubanRouter from './routes/douban';
+import CarHomeRouter from './routes/carHome'
 import log4js from 'log4js';
 import './service/douban'
 import './service/carHome'
@@ -21,17 +24,17 @@ import './service/carHome'
 const path = require('path');
 const app = express();
 
-const proxy   = require('express-http-proxy')
-
-const proxyTable = proxy('http://192.168.2.107:8088', {
-//   proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
-//     // console.log(proxyReqOpts, srcReq);
-
-//     proxyReqOpts.headers['Referer'] = 'http://192.168.2.107:8088';
-//  },
-})
-
-app.use('/', proxyTable);
+// const proxy   = require('express-http-proxy')
+//
+// const proxyTable = proxy('http://192.168.2.107:8088', {
+// //   proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
+// //     // console.log(proxyReqOpts, srcReq);
+//
+// //     proxyReqOpts.headers['Referer'] = 'http://192.168.2.107:8088';
+// //  },
+// })
+//
+// app.use('/', proxyTable);
 
 app.use(express.static(path.resolve(__dirname, '../dist/')));
 
@@ -72,9 +75,15 @@ app.use('/api/sys', positionRoleRouter);
 
 app.use('/api/tc', TestApisRouter);
 
-app.get("/test", (req, res) => {
+app.get('/test', (req, res) => {
   res.send("Hello Docker!")
 });
+
+// 第三方服务
+// 豆瓣
+app.use('/api/thirdparty', DoubanRouter)
+// 汽车之家
+app.use('/api/thirdparty', CarHomeRouter)
 
 app.listen(12306, () => {
   console.log(`serve is being on ${ip.address()}:${PORT}`);

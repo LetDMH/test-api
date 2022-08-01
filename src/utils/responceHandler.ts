@@ -8,16 +8,17 @@
  */
 import { Request, Response, NextFunction } from 'express';
 import { errorLogger } from './logger';
+import {promises} from "dns";
 
 export default class ResponseHandler {
   /**
    * @description: 错误处理函数
    * @param {string} err 错误信息
-   * @param {string} errcode 错误码
+   * @param {string} errCode 错误码
    * @param {Response} res 响应函数
    * @return {*}
    */
-  public static errorHandler(error: string | string[], res: Response, errcode: number = 500) {
+  public static errorHandler(error: string | string[], res: Response, errCode: number = 500) {
     let err: string;
     if (Array.isArray(error)) {
       err = error.join(";");
@@ -28,7 +29,7 @@ export default class ResponseHandler {
     errorLogger.error(err);
     // console.log(error);
     res.send({
-      code: errcode,
+      code: errCode,
       data: null,
       // msg: err
       msg: '网络异常'
@@ -53,7 +54,7 @@ export default class ResponseHandler {
    * @param {Function} handler 逻辑层处理函数
    * @return {*}
    */
-  public static commonHandler(handler) {
+  public static commonHandler(handler: (req: Request, res: Response, next: NextFunction) => Promise<any>) {
     return async(req: Request, res: Response, next: NextFunction) => {
       try {
         const result = await handler(req, res, next);
